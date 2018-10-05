@@ -15,8 +15,8 @@
  		* create tablespace herick100 datafile  'C:\BBDDII\herick100.dbf' size 10240 m;
 	        * create user herick identified by 123 default tablespace herick100  temporary tablespace temp;
 	        * grant DBA to marcos ;
-   	    *nota:= al crear el tablespace puede tardar un poco bastante debido al tamaño que le estamos asignando 
 
+   	        * nota:= al crear el tablespace puede tardar un poco bastante debido al tamaño que le estamos asignando 
      		* borremos el usuario con el estabamos haciendo antes el sql developer  (debemos desconectarnos y conectarnos con herick)
                 * Drop user proy cascade;
 		* nota:= cambiar "proy" por el nombre de tu usuario 
@@ -28,7 +28,7 @@
 	* CREATE.sql
 	* Procedimientos-funciones-trigger.sql
 
-	*nota:= tambien hay un archivo llamado DROP.sql que sirve a la hora de borrar la BBDD , sin imbargo despues de ejecutar este .sql recuerda purgar la papelera desde el usuario system
+	* nota:= tambien hay un archivo llamado DROP.sql que sirve a la hora de borrar la BBDD , sin imbargo despues de ejecutar este .sql recuerda purgar la papelera desde el usuario system
 
 
 
@@ -53,7 +53,7 @@
    * execute H11_simulacion_regresiones(sysdate,1,1); --primer elemento dia a simular precio, segundo elemento la moneda del  capital , y el tercero el mercado
 
            * nota:= 
-		    * te da simulacion lineal
+		* te da simulacion lineal
                     * te da simulacion cuadratica
                     * te da simulacion exponencial
 
