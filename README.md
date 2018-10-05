@@ -43,18 +43,18 @@
    * execute H03_CREAR_USUARIOS_ALEATORIO(500); -- Este procedimiento crea 500 usuarios aleatorios
    * execute H04_CREAR_MONEDERO_ALEATORIO;
    * execute H07_RELLENO_FALTANTE(100); -- Este procedimiento crea 100 depositos y retiros
--------------------------------------------------------------------------------------------------------------------------
    * execute H08_CREAR_HISTO_MONE_MERCA(50);--se crean 50 dias anteriores a la fecha actual en el historias
 
-   * execute  H05_SIMULA_5_MILLON_TRADING(200,1,1); --La simulaciòn principal , en ella se hace el trading de 200 operaciones aleatorias del mercado uno y de la moneda numero uno*
--------------------------------------------------------------------------------------------------------------------------
+   * execute  H05_SIMULA_5_MILLON_TRADING(200,1,1); --La simulaciòn principal , en ella se hace el trading de 200 operaciones aleatorias del mercado uno y de la moneda numero uno
+
    * execute H0_FUNCION_USUARIO_LOGIN('MATIAS_0','0'); --Esto sirve para probar el login de los usuarios da 1 cuando es correcto 0 cuando no 
    * update vista_usuario set contrasena_Actual = 'herick' where id=1;  --actualizar la vista del usuario
    * update vista_monedero set cantidad_Actual = 21.2 where id=2;       --vista del monedero de dicho usuario
--------------------------------------------------------------------------------------------------------------------------
    * execute H10_simulacion_montecarlo(5.1,1,1);  --primer elemento capital a simular, segundo elemento la moneda del capital , y el tercero el mercado
    * execute H11_simulacion_regresiones(sysdate,1,1); --primer elemento dia a simular precio, segundo elemento la moneda del  capital , y el tercero el mercado
-           * nota:= * te da simulacion lineal
+
+           * nota:= 
+		    * te da simulacion lineal
                     * te da simulacion cuadratica
                     * te da simulacion exponencial
 
