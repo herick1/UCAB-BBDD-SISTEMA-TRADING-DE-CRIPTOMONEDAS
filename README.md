@@ -53,7 +53,7 @@
    * execute H11_simulacion_regresiones(sysdate,1,1); --primer elemento dia a simular precio, segundo elemento la moneda del  capital , y el tercero el mercado
 
            * nota:= 
-		* te da simulacion lineal
+		  * te da simulacion lineal
                     * te da simulacion cuadratica
                     * te da simulacion exponencial
 
