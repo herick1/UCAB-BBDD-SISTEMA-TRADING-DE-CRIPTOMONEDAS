@@ -12,15 +12,14 @@
 * crear un tablespace nuevo
 	* Primero crear una carpeta en c:/ , yo la llame BBDDII
 	* Entrar en sql plus y poner:
-            * create tablespace herick100 datafile  'C:\BBDDII\herick100.dbf' size 10240 m; 	
-            * create user herick identified by 123 default tablespace herick100  temporary tablespace temp;
-            * grant DBA to marcos ;
+ 		* create tablespace herick100 datafile  'C:\BBDDII\herick100.dbf' size 10240 m;
+	        * create user herick identified by 123 default tablespace herick100  temporary tablespace temp;
+	        * grant DBA to marcos ;
    	    *nota:= al crear el tablespace puede tardar un poco bastante debido al tamaño que le estamos asignando 
 
-            * borremos el usuario con el estabamos haciendo antes el sql developer  (debemos desconectarnos y conectarnos con herick)
-            * Drop user proy cascade;
-
-            *nota:= cambiar "proy" por el nombre de tu usuario 
+     		* borremos el usuario con el estabamos haciendo antes el sql developer  (debemos desconectarnos y conectarnos con herick)
+                * Drop user proy cascade;
+		* nota:= cambiar "proy" por el nombre de tu usuario 
 
 * Ahora dentro de sql developer debemos "crear una nueva conexion" con el usuario y la clave que pusimos en el paso anterior
 
