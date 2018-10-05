@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?><displays><folder>
+	<name><![CDATA[Informes Definidos por el Usuario]]></name>
+	<tooltip><![CDATA[Informes Definidos por el Usuario]]></tooltip>
+	<description><![CDATA[Informes Definidos por el Usuario]]></description>
+		<display id="2839e668-0164-1000-8002-c0a80183c84e" type="" style="Chart" enable="true">
+		<name><![CDATA[Graficas_dia]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE>BAR_VERT_CLUST</TYPE>
+			<THREED>true</THREED>
+			<LEGEND>false</LEGEND>
+			<GRADIENT>true</GRADIENT>
+			<STYLE>Default</STYLE>
+			<GRID>false</GRID>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[select fecha_dia,fecha_dia,valor_mercado_dia
+ from historial_monedas_mercado
+ where id_moneda= 1  and id_mercado= 1]]></sql>
+		</query>
+	</display>
+	<display id="2cfb1fa7-0164-1000-8001-c0a80183d810" type="" style="Chart" enable="true">
+		<name><![CDATA[confianza en los mercados]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[null]]></drillclass>
+		<CustomValues>
+			<TYPE>BAR_VERT_CLUST</TYPE>
+			<THREED>true</THREED>
+			<LEGEND>false</LEGEND>
+			<GRADIENT>true</GRADIENT>
+			<GRID>true</GRID>
+			<STYLE>Default</STYLE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[select m.id ,m.id, mercados.num
+from ( select  id_mercado,count(*) as num
+       from historial_compra_venta
+       where id_mercado= 1  
+       group by (id_mercado)
+       union
+       select id_mercado, count(*) as num
+       from historial_compra_venta
+       where id_mercado= 2 
+       group by (id_mercado)
+       union
+       select id_mercado, count(*) as num
+       from historial_compra_venta
+       where id_mercado= 3
+       group by (id_mercado)) mercados , mercado m 
+where m.id=mercados.id_mercado]]></sql>
+		</query>
+	</display>
+</folder>
+</displays>
